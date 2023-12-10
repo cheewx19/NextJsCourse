@@ -14,3 +14,6 @@ User server component whenever possible as it helps in performance and UX
 - loading.tsx
 - error.tsx
 - route.tsx
+
+### Production Build Process
+![image](https://github.com/cheewx19/NextJsCourse/assets/46551028/fc8b9735-9461-4fa3-8c54-7ad742938c58)
