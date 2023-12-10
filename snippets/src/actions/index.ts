@@ -3,6 +3,7 @@
 "use server";
 
 import { db } from "@/db";
+import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 
 // Adding formState for server action to return error
@@ -40,6 +41,7 @@ export async function createSnippet(
       };
     }
   }
+  revalidatePath("/") // reload cache on home page
   // redirect user back to home page
   // redirect needs to be outside of try catch
   // as next redirect actually throws a special error
@@ -52,6 +54,7 @@ export async function editSnippet(id: number, code: string) {
     where: { id },
     data: { code },
   });
+  revalidatePath(`/snippets/${id}`)
   redirect(`/snippets/${id}`);
 }
 
@@ -59,5 +62,6 @@ export async function deleteSnippet(id: number) {
   await db.snippet.delete({
     where: { id },
   });
+  revalidatePath("/") // reload cache on home page
   redirect(`/`);
 }
