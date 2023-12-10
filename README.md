@@ -17,3 +17,5 @@ User server component whenever possible as it helps in performance and UX
 
 ### Production Build Process
 ![image](https://github.com/cheewx19/NextJsCourse/assets/46551028/fc8b9735-9461-4fa3-8c54-7ad742938c58)
+
+![image](https://github.com/cheewx19/NextJsCourse/assets/46551028/833a467d-1bca-4546-9c9b-d325bc319773)
