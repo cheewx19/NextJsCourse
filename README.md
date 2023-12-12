@@ -24,3 +24,6 @@ User server component whenever possible as it helps in performance and UX
 We used on-demand caching for this application. (Purging page cache when `revalidatePath` is called)
 reloading page cache would mean we will trigger the fetching of data again to show updated results
 - Note that these caching happens on build time
+
+### Frontend Implementation Design
+![image](https://github.com/cheewx19/NextJsCourse/assets/46551028/8e8194d1-693a-4de3-ab01-87f4a8988173)
