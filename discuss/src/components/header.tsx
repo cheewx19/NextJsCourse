@@ -7,6 +7,8 @@ import {
   NavbarItem,
 } from "@nextui-org/react";
 import HeaderAuth from "./header-auth";
+import SearchInput from "./search-input";
+import { Suspense } from "react";
 
 export default function Header() {
   return (
@@ -18,7 +20,10 @@ export default function Header() {
       </NavbarBrand>
       <NavbarContent justify="center">
         <NavbarItem>
-          <Input />
+          {/* Next does not want to load useSearchParams on server so we add suspense here to execute it after page is rendered */}
+          <Suspense>
+            <SearchInput />
+          </Suspense>
         </NavbarItem>
       </NavbarContent>
       <NavbarContent justify="end">
